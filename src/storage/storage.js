@@ -6,6 +6,8 @@ export class Storage {
                     // If not, create new item for our Tic Tac Toe game
             localStorage.setItem(storageName, initialValue)
         }
+
+       
     }
 
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-//import {storage} from  '././storage/storage'
+import { Storage } from './../storage/storage'
 
 export class Scoreboard extends React.Component{
     state = {
@@ -8,18 +8,24 @@ export class Scoreboard extends React.Component{
     }
 
 
-// async componentDidMount() {
-//     let storage = await new  Storage().getData()
+async componentDidMount() {
+    let storage = await new  Storage().getData()
 
-//     this.setState({
-//         scoreboard: storage
-//     })
-// }
+    this.setState({
+        scoreboard: storage
+    })
+}
 
 render(){
     return(
         <div className="game">
-        <h1>Recent games:</h1>
+        {/* <h1>Recent games:</h1> */}
+        {/* <h1>Hey!Sandhya here..</h1> */}
+       
+        {/* <input type="text" placeholder="Enter your name..." id="myInput">
+        <button type="button" onclick="getInputValue();">Submit</button>
+       */}
+        <h2>Lets Play One Game</h2>
 
                 {/* List with previous games */}
         <ul>
@@ -30,7 +36,7 @@ render(){
 
                 {/* Link to start new game */}
         <Link to="/board">
-          <button className="btn">Start new game</button>
+          <button className="btn">Start a game</button>
         </Link>
       </div>
     )

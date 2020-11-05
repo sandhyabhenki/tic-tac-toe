@@ -71,8 +71,8 @@ render() {
         this.storage.update([`${winner} won`])
 
     }else if(!winner && isFilled) {
-        status = 'Game drawn!'
-        this.storage.update(['Game drawn'])
+        status = 'Its a Tie!'
+        this.storage.update(['Tie tie Phiss!'])
     }else{
         status = `It is ${(this.state.xIsNext ? 'x' : 'o')}'s turn.`
     }
